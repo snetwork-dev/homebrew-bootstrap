@@ -1,4 +1,4 @@
-require "download_strategy"
+require_relative "../custom_download_strategy.rb"
 
 class Bootstrap < Formula
   desc "S-Network Bootstrap test"
