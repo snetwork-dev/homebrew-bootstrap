@@ -1,4 +1,3 @@
-require "download_strategy"
 class GitHubPrivateRepositoryDownloadStrategy < CurlDownloadStrategy
   require "utils/formatter"
   require "utils/github"
