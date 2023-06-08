@@ -4,7 +4,7 @@ class Bootstrap < Formula
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
   url "https://github.com/snetwork-dev/bootstrap/archive/refs/tags/0.1.tar.gz", :using => GitHubPrivateRepositoryDownloadStrategy 
-  sha256 "53542da0df2991adfbed30398e906f01de9863a87250be98874751a8783be246"
+  sha256 "5e469655b9586371f12d7f8c1aebf39e3706e23512e572e74bf3649ca77b23b9"
   version "0.1.0"
   license ""
 
