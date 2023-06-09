@@ -1,5 +1,3 @@
-require_relative "../custom_download_strategy"
-
 class Bootstrap < Formula
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
