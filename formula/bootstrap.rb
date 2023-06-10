@@ -1,18 +1,9 @@
+require_relative "lib/custom_download_strategy"
+
 class Bootstrap < Formula
-    def set_github_token
-    @github_token = ENV.fetch("HOMEBREW_GITHUB_API_TOKEN")
-    unless @github_token
-      raise CurlDownloadStrategyError, "Environmental variable HOMEBREW_GITHUB_API_TOKEN is required."
-    end
-  end
-    set_github_token
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
-  url "https://api.github.com/repos/snetwork-dev/bootstrap/releases/assets/112025963",
-      headers: [
-        "Accept: application/octet-stream",
-        "Authorization: bearer #{@github_token}"
-      ]
+  url "https://api.github.com/repos/snetwork-dev/bootstrap/releases/assets/112025963" :using => GitHubPrivateRepositoryReleaseDownloadStrategy
   sha256 "5e469655b9586371f12d7f8c1aebf39e3706e23512e572e74bf3649ca77b23b9"
   version "0.1.0"
   license ""
