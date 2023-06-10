@@ -1,3 +1,5 @@
+require "compat/download_strategy.rb"
+
 class Bootstrap < Formula
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
