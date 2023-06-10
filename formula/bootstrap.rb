@@ -5,6 +5,7 @@ class Bootstrap < Formula
       raise CurlDownloadStrategyError, "Environmental variable HOMEBREW_GITHUB_API_TOKEN is required."
     end
   end
+    set_github_token
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
   url "https://api.github.com/repos/snetwork-dev/bootstrap/releases/assets/112025963",
