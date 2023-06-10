@@ -5,7 +5,7 @@ class Bootstrap < Formula
   url "https://github.com/snetwork-dev/bootstrap/archive/refs/tags/0.1.tar.gz",
       headers: [
         "Accept: application/octet-stream",
-        "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
+        "Authorization: bearer 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"
       ]
   version "0.1.0"
   license ""
