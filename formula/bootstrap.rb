@@ -1,5 +1,4 @@
 class Bootstrap < Formula
-  system "echo", ENV["HOMEBREW_GITHUB_API_TOKEN"]
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
   url "https://github.com/snetwork-dev/bootstrap/archive/refs/tags/0.1.tar.gz",
