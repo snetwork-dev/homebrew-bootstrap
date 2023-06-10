@@ -1,5 +1,10 @@
 class Bootstrap < Formula
-  @github_token = ENV.fetch("HOMEBREW_GITHUB_API_TOKEN")
+    def set_github_token
+    @github_token = ENV.fetch("HOMEBREW_GITHUB_API_TOKEN")
+    unless @github_token
+      raise CurlDownloadStrategyError, "Environmental variable HOMEBREW_GITHUB_API_TOKEN is required."
+    end
+  end
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
   url "https://api.github.com/repos/snetwork-dev/bootstrap/releases/assets/112025963",
