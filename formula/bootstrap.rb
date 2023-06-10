@@ -10,12 +10,12 @@ class Bootstrap < Formula
   license ""
 
   def install
-    if !ENV['ZSH_VERSION']?
-      system "echo", ENV['ZSH_VERSION']
-    elsif !ENV['BASH_VERSION']?
-      system "echo", ENV['BASH_VERSION']
+    if ENV['ZSH_VERSION'] != ""
+      bin.install "test.zsh"
+      bin.install_symlink "#{prefix}/bin/test.zsh" => "testsymlinknew"
+    elsif ENV['BASH_VERSION'] != ""
+      bin.install "test.sh"
+      bin.install_symlink "#{prefix}/bin/test.sh" => "testsymlinknew"
     end
-    bin.install "test.sh"
-    bin.install_symlink "#{prefix}/bin/test.sh" => "testsymlinknew"
   end
 end
