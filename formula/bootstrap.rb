@@ -1,7 +1,7 @@
 class Bootstrap < Formula
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
-  url "https://github.com/snetwork-dev/bootstrap",
+  url "https://github.com/snetwork-dev/bootstrap/releases/download/v0.1/bootstrap-0.1.tar.gz",
       headers: [
         "Accept: application/octet-stream",
         "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
