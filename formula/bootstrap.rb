@@ -1,4 +1,4 @@
-require_relative "lib/custom_download_strategy"
+require_relative "../lib/custom_download_strategy"
 
 class Bootstrap < Formula
   desc "S-Network Bootstrap test"
