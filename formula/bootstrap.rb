@@ -1,6 +1,6 @@
 class Bootstrap < Formula
   desc "S-Network Bootstrap test"
-  homepage "https://github.com/snetwork-dev/bootstrap"
+  homepage "https://github.com/snetwork-dev/bootstrap", :private => true
   url "https://github.com/snetwork-dev/bootstrap/archive/refs/tags/v0.1.tar.gz",
       headers: [
         "Accept: application/octet-stream",
