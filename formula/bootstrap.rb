@@ -2,11 +2,11 @@ class Bootstrap < Formula
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
   url "https://github.com/snetwork-dev/bootstrap/archive/refs/tags/v0.1.tar.gz",
-      :using => GitHubPrivateRepositoryReleaseDownloadStrategy,
       headers: [
         "Accept: application/octet-stream",
         "Authorization: bearer #{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
       ]
+  version "v0.1"
   license ""
 
   def install
