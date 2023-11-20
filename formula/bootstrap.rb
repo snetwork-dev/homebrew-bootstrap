@@ -6,7 +6,7 @@ class Bootstrap < Formula
         "Accept: application/octet-stream",
         "Authorization: bearer #{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
       ]
-  version "v0.1"
+  version "0.1"
   license ""
 
   def install
