@@ -3,7 +3,7 @@ class Bootstrap < Formula
   homepage "https://github.com/snetwork-dev/bootstrap"
   url "https://api.github.com/repos/snetwork-dev/bootstrap/tarball",
       headers: [
-        "Authorization: Bearer #{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
+        "Authorization: Bearer ENV['HOMEBREW_GITHUB_API_TOKEN']"
       ]
   version "0.1"
   license ""
