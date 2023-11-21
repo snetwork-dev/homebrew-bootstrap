@@ -2,7 +2,10 @@ class Bootstrap < Formula
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
   url "https://api.github.com/repos/snetwork-dev/bootstrap/tarball/main",
-      headers: ["Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"]
+      headers: [
+        "Authorization: Bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}",
+        "Accept: application/vnd.github.v3.raw"
+      ]
   version "0.1"
   license ""
 
