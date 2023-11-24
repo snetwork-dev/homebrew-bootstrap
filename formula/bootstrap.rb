@@ -1,11 +1,11 @@
 class Bootstrap < Formula
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
-  url "https://api.github.com/repos/snetwork-dev/bootstrap/tarball/main",
+  url "https://github.com/snetwork-dev/bootstrap/archive/refs/tags/v0.1.tar.gz",
       headers: [
         "Authorization: Bearer ENV['HOMEBREW_GITHUB_API_TOKEN']"
       ]
-  version "0.1.13"
+  version "0.1"
   license ""
 
   def install
