@@ -6,15 +6,15 @@ class Bootstrap < Formula
         "Authorization: Bearer #{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
       ]
   license :cannot_represent
-  version "0.1.2"
+  version "0.1.3"
 
   def install
     if ENV['ZSH_VERSION'] != ""
-      bin.install "sshmenu.zsh" => "sshmenu"
-      bin.install "test.zsh"
+      bin.install "scripts/sshmenu.zsh" => "sshmenu"
+      bin.install "scripts/test.zsh"
       bin.install_symlink "#{prefix}/bin/test.zsh" => "testsymlinknew"
     elsif ENV['BASH_VERSION'] != ""
-      bin.install "test.sh"
+      bin.install "scripts/test.sh"
       bin.install_symlink "#{prefix}/bin/test.sh" => "testsymlinknew"
     end
   end
