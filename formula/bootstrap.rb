@@ -10,6 +10,7 @@ class Bootstrap < Formula
 
   def install
     if ENV['ZSH_VERSION'] != ""
+      bin.install "scripts/sshmenu.zsh" => "sshmenu"
       bin.install "scripts/test.zsh"
       bin.install_symlink "#{prefix}/bin/test.zsh" => "testsymlinknew"
     elsif ENV['BASH_VERSION'] != ""
