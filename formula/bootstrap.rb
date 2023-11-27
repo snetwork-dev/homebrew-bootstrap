@@ -5,7 +5,7 @@ class Bootstrap < Formula
       headers: [
         "Authorization: Bearer #{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
       ]
-  license ""
+  license :cannot_represent
   version "0.1"
 
   def install
