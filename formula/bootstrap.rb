@@ -6,6 +6,7 @@ class Bootstrap < Formula
         "Authorization: Bearer #{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
       ]
   license ""
+  version 0.1
 
   def install
     if ENV['ZSH_VERSION'] != ""
