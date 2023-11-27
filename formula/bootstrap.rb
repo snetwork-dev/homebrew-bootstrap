@@ -10,10 +10,10 @@ class Bootstrap < Formula
 
   def install
     if ENV['ZSH_VERSION'] != ""
-      bin.install "test.zsh"
+      bin.install "scripts/test.zsh"
       bin.install_symlink "#{prefix}/bin/test.zsh" => "testsymlinknew"
     elsif ENV['BASH_VERSION'] != ""
-      bin.install "test.sh"
+      bin.install "scripts/test.sh"
       bin.install_symlink "#{prefix}/bin/test.sh" => "testsymlinknew"
     end
   end
