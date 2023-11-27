@@ -1,7 +1,7 @@
 class Bootstrap < Formula
   desc "S-Network Bootstrap test"
   homepage "https://github.com/snetwork-dev/bootstrap"
-  url "https://api.github.com/repos/snetwork-dev/bootstrap/tarball/master",
+  url "https://github.com/snetwork-dev/bootstrap/tarball/master",
       headers: [
         "Authorization: Bearer #{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
       ]
