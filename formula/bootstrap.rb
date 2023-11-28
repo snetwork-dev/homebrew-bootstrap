@@ -6,8 +6,8 @@ class Bootstrap < Formula
         "Authorization: Bearer #{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
       ]
   license :cannot_represent
-  version "0.1"
-  sha256 "e03a10556b023965eaa211d24d96a880829c069e66742385c63d2bf4dae5a88d"
+  version "0.1.1"
+  sha256 "9fba709cb0908ec6c585477ea91be611648241cac89fc80c90cbff7bd4e10047"
 
   def install
     if ENV['ZSH_VERSION'] != ""
