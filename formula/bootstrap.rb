@@ -7,8 +7,8 @@ class Bootstrap < Formula
       ]
   head "https://github.com/snetwork-dev/bootstrap"
   license :cannot_represent
-  version "0.1.1"
-  sha256 "9fba709cb0908ec6c585477ea91be611648241cac89fc80c90cbff7bd4e10047"
+  version "0.1.2"
+  sha256 "317c46e75bccbf65290014850d914562e2543f2a6c2165d668caa013e3da7d46"
 
   def install
     if ENV['ZSH_VERSION'] != ""
