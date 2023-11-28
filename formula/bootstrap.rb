@@ -7,7 +7,7 @@ class Bootstrap < Formula
       ]
   license :cannot_represent
   version "0.1"
-  sha256 "0019dfc4b32d63c1392aa264aed2253c1e0c2fb09216f8e2cc269bbfb8bb49b5"
+  sha256 "e03a10556b023965eaa211d24d96a880829c069e66742385c63d2bf4dae5a88d"
 
   def install
     if ENV['ZSH_VERSION'] != ""
