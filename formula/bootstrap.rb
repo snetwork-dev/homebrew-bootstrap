@@ -5,6 +5,7 @@ class Bootstrap < Formula
       headers: [
         "Authorization: Bearer #{ENV['HOMEBREW_GITHUB_API_TOKEN']}"
       ]
+  head "https://github.com/snetwork-dev/bootstrap"
   license :cannot_represent
   version "0.1.1"
   sha256 "9fba709cb0908ec6c585477ea91be611648241cac89fc80c90cbff7bd4e10047"
