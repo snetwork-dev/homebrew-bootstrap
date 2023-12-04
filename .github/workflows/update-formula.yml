@@ -20,8 +20,8 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          cp formula_templates/bootstrap.rb formula/bootstrap_test.rb
           sed -i -e "s/%%%VERSION%%%/${{ github.event.inputs.version }}/g" formula/bootstrap_test.rb
+          sed -r "/^([[:space:]]{2}){1,2}version[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.version }}\"/" bootstrap_test.rb
           date > generated.txt
           echo "Version: ${{ github.event.inputs.version }}" >> generated.txt
           git config user.name 'github-actions[bot]'
