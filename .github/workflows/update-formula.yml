@@ -29,7 +29,7 @@ jobs:
       - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
-          sed -i -r "/^([[:space:]]{2}){1,2}url[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.url }}\"/" formula/bootstrap_test.rb
+          sed -i -r "#^([[:space:]]{2}){1,2}url[[:space:]]#s#\"[^\"][^\"]*\"/\"${{ github.event.inputs.url }}\"#" formula/bootstrap_test.rb
           sed -i -r "/^([[:space:]]{2}){1,2}version[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.version }}\"/" formula/bootstrap_test.rb
           sed -i -r "/^([[:space:]]{2}){1,2}sha256[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.checksum }}\"/" formula/bootstrap_test.rb
           date > generated.txt
