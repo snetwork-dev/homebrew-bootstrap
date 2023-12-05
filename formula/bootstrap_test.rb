@@ -7,7 +7,7 @@ class Bootstrap < Formula
       ]
   head "https://github.com/snetwork-dev/bootstrap"
   license :cannot_represent
-  version "0.0.6"
+  version "0.0.15"
   sha256 "%%%SHA256%%%"
 
   def install
