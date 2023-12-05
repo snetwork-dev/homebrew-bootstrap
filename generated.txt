@@ -1,2 +1,4 @@
-Tue Dec  5 17:31:43 UTC 2023
-Version: 0.0.15
+Tue Dec  5 21:49:46 UTC 2023
+Checksum: 85470913a10aa5039e0c5e2ad2828df023d6b3d704aa278045006cb3ea6e9baa
+URL: https://github.com/snetwork-dev/bootstrap/archive/refs/tags/v0.0.6.tar.gz
+Version: v0.0.6
