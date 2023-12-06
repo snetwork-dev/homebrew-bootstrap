@@ -22,6 +22,11 @@ jobs:
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+      - name: Input validation
+        run: |
+          echo "${{ github.event.inputs.checksum }}" | grep -Pq '^[A-Fa-f0-9]{64}$' || echo "Checksum is invalid!"
+          echo "${{ github.event.inputs.url }}" | grep -Pq '^https://github.com/${{ context.repo.owner }}/bootstrap/archive/refs/tags/v(\d+\.)?(\d+\.)?(\d+).tar.gz$' || echo "URL is invalid!"
+          echo "${{ github.event.inputs.version }}" | grep -Pq '^v(\d+\.)?(\d+\.)?(\d+)$' || echo "Version is not on the format 'v1', 'v1.0' or 'v1.0.1'!"
       - name: Check out repository code
         uses: actions/checkout@v4
       - name: Modify formula
