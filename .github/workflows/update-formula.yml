@@ -17,7 +17,8 @@ on:
         default: ""
 
 jobs:
-  Update-Homebrew-Formula:
+  update-homebrew-formula:
+    name: Update Homebrew Formula
     runs-on: ubuntu-latest
     env:
       formula: bootstrap_test.rb
