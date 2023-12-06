@@ -24,8 +24,6 @@ jobs:
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
       - name: Check out repository code
         uses: actions/checkout@v4
-      - run: echo "💡 The ${{ github.repository }} repository has been cloned to the runner."
-      - run: echo "🖥️ The workflow is now ready to test your code on the runner."
       - name: List files in the repository
         run: |
           sed -i -r "/^([[:space:]]{2}){1,2}url[[:space:]]/s|\"[^\"][^\"]*\"|\"${{ github.event.inputs.url }}\"|" formula/bootstrap_test.rb
