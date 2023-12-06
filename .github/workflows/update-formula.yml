@@ -19,6 +19,8 @@ on:
 jobs:
   Update-Homebrew-Formula:
     runs-on: ubuntu-latest
+    env:
+      formula: bootstrap_test.rb
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
       - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
@@ -29,11 +31,11 @@ jobs:
           echo "${{ github.event.inputs.version }}" | grep -Pq '^v(\d+\.)?(\d+\.)?(\d+)$' || echo "Version is not on the format 'v1', 'v1.0' or 'v1.0.1'!"
       - name: Check out repository code
         uses: actions/checkout@v4
-      - name: Modify formula
+      - name: Modify formula ${{ env.formula }}
         run: |
-          sed -i -r "/^([[:space:]]{2}){1,2}url[[:space:]]/s|\"[^\"][^\"]*\"|\"${{ github.event.inputs.url }}\"|" formula/bootstrap_test.rb
-          sed -i -r "/^([[:space:]]{2}){1,2}version[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.version }}\"/" formula/bootstrap_test.rb
-          sed -i -r "/^([[:space:]]{2}){1,2}sha256[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.checksum }}\"/" formula/bootstrap_test.rb
+          sed -i -r "/^([[:space:]]{2}){1,2}url[[:space:]]/s|\"[^\"][^\"]*\"|\"${{ github.event.inputs.url }}\"|" formula/${formula}
+          sed -i -r "/^([[:space:]]{2}){1,2}version[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.version }}\"/" formula/${formula}
+          sed -i -r "/^([[:space:]]{2}){1,2}sha256[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.checksum }}\"/" formula/${formula}
           date > generated.txt
           echo "Checksum: ${{ github.event.inputs.checksum }}" >> generated.txt
           echo "URL: ${{ github.event.inputs.url }}" >> generated.txt
