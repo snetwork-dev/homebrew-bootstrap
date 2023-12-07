@@ -1,5 +1,5 @@
 name: Update formula
-run-name: ${{ github.actor }} is testing out GitHub Actions 🚀
+run-name: ${{ github.actor }} is updating homebrew formula
 on:
   workflow_dispatch:
     inputs:
@@ -37,10 +37,6 @@ jobs:
           sed -i -r "/^([[:space:]]{2}){1,2}url[[:space:]]/s|\"[^\"][^\"]*\"|\"${{ github.event.inputs.url }}\"|" formula/${formula}
           sed -i -r "/^([[:space:]]{2}){1,2}version[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.version }}\"/" formula/${formula}
           sed -i -r "/^([[:space:]]{2}){1,2}sha256[[:space:]]/s/\"[^\"][^\"]*\"/\"${{ github.event.inputs.checksum }}\"/" formula/${formula}
-          date > generated.txt
-          echo "Checksum: ${{ github.event.inputs.checksum }}" >> generated.txt
-          echo "URL: ${{ github.event.inputs.url }}" >> generated.txt
-          echo "Version: ${{ github.event.inputs.version }}" >> generated.txt
       - name: Commit and push to repository
         run: |
           git config user.name 'github-actions[bot]'
